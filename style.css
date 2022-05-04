@@ -22,15 +22,24 @@ a, a:hover, a:focus, a:active {
                     /* GLOBAL ENDS */
 
 body {
-    /* padding: var(--tenPadding); */
+    padding: var(--tenPadding);
 }
 
                     /* HEADER */
 header {
     position: fixed;
     display: grid;
-    grid-template-columns: 200px 1fr 200px;
-    background-color: var(--redSecondary)
+    grid-template-columns: 200px 1fr 300px;
+    background-color: var(--redSecondary);
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: var(--tenPadding);
+}
+
+.logo {
+    display: flex;
+    place-items: center;
 }
 
 .logoHonk {
@@ -83,15 +92,14 @@ header {
 
 .container {
     display: grid;
-    grid-template-columns: 200px 1fr 200px;
-    padding: 70px 0px 0px 0px;
+    grid-template-columns: 200px 1fr 300px;
+    padding: 100px 0px 0px 0px;
     min-height: 100vh;
 }
 
 /* ASIDE FOLDERS */
 
 .folders {
-    background: var(--redSecondary);
     display: grid;
     grid-auto-rows: 40px;
     padding-left: 40px;
@@ -124,6 +132,18 @@ header {
 .profile:hover,
 .more:hover
 {
+    color: var(--redSecondary);
+}
+
+.home:active,
+.explore:active,
+.notifications:active,
+.messages:active,
+.bookmarks:active,
+.lists:active,
+.profile:active,
+.more:active
+{
     color: var(--redPrimary);
 }
 
@@ -131,7 +151,6 @@ header {
 
                     /* SECTION WALL */
 .wall {
-    background: var(--redTertiary);
     padding: 3%;
 }
 
@@ -267,8 +286,9 @@ em {
                     /* SECTION WALL ENDS */
 
 /* ASIDE WHATS HAPPENING */
-.whatsHappening {
-    background: var(--redSecondary)
+.whatsHonking {
+    background: var(--redTertiary);
+    border-radius: 10px;
 }
 /* ASIDE WHATS HAPPENING ENDS */
 
