@@ -19,6 +19,14 @@ a, a:hover, a:focus, a:active {
     
     --tenPadding: 0% 10%;
 }
+
+h1 {
+    font-size:1.6rem;
+}
+
+h2 {
+    font-size:1.3rem;
+}
                     /* GLOBAL ENDS */
 
 body {
@@ -64,7 +72,7 @@ header {
     display: flex;
     place-items: center;
     border: black solid 2px;
-    border-radius: 5px;
+    border-radius: 20px;
     padding: 5%;
     margin: 5%;
     background-color: var(--redTertiary);
@@ -101,7 +109,7 @@ header {
 
 .folders {
     display: grid;
-    grid-auto-rows: 40px;
+    grid-auto-rows: 60px;
     padding-left: 40px;
     padding-top: 10px;
 }
@@ -188,7 +196,7 @@ header {
 
 .field {
     margin: 2px;
-    padding: 2px;
+    padding: 10px;
     border: rgb(154, 153, 153) solid 1px;
     border-radius: 5%;
     display: flex;
@@ -204,7 +212,7 @@ header {
 
 .attachment {
     display: grid;
-    grid-template-columns: repeat(4, 40px) 1fr 90px;
+    grid-template-columns: 60px repeat(4, 40px) 1fr 90px;
     list-style: none;
 }
 
@@ -253,11 +261,23 @@ margin-right: 5px;
     margin: 5px 0px 5px 0px;
 }
 
-.story img {
+.story > img {
     height: 50px;
     height: 50px;
     width: 50px;
     border-radius: 50%;
+}
+
+.reactions {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    margin-top: 15px;
+}
+
+.reactions img{
+    width:23px;
+    opacity: 0.3;
 }
 
 .post {
@@ -286,10 +306,25 @@ em {
                     /* SECTION WALL ENDS */
 
 /* ASIDE WHATS HAPPENING */
-.whatsHonking {
+.whatsHonkening {
     background: var(--redTertiary);
     border-radius: 10px;
+    padding: 5%;
 }
+
+.honkening {
+    display: grid;
+    grid-template-columns: auto 70px;
+    margin: 20px 5px;
+    font-size: 1.2rem;
+}
+
+.honkening img {
+    width: 70px;
+    margin-left: 5px;
+    border-radius: 5px;
+}
+
 /* ASIDE WHATS HAPPENING ENDS */
 
 @media screen and (max-width: 800px) {
