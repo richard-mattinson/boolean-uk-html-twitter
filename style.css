@@ -108,7 +108,7 @@ header {
 }
 
                     /* FOLDERS */
-    .folders {
+.folders {
     justify-self: left;
     display: grid;
     grid-template-rows: repeat(9, 60px) auto 60px;
@@ -121,7 +121,7 @@ header {
 
 .user {
     display: grid;
-    grid-template-columns: 50px 1fr 30px;
+    grid-template-columns: 50px 1fr 5px;
 }
 
 .userPortrait {
@@ -132,6 +132,10 @@ header {
 
 .userEllipsis {
     width: 20px
+}
+
+.userText {
+    font-weight: 400;
 }
 
 .home,
@@ -158,41 +162,19 @@ header {
     width: 20px;
 }
 
-.home:hover,
-.explore:hover,
-.notifications:hover,
-.messages:hover,
-.bookmarks:hover,
-.lists:hover,
-.profile:hover,
-.more:hover
-{
+a:visited {
+    color: var(--redPrimary);
+    font-weight: 700;
+} 
+a:hover {
     color: var(--redSecondary);
 }
 
-.home :not(:hover),
-.explore :not(:hover),
-.notifications :not(:hover),
-.messages :not(:hover),
-.bookmarks :not(:hover),
-.lists :not(:hover),
-.profile :not(:hover),
-.more :not(:hover)
-{
-    color: black;
+a:active {
+    text-transform: capitalize;
+    font-size: 150%;
 }
 
-.home:visited,
-.explore:visited,
-.notifications:active,
-.messages:active,
-.bookmarks:active,
-.lists:active,
-.profile:active,
-.more:active
-{
-    color: var(--redPrimary);
-}
 
                     /* FOLDERS END */
 
@@ -282,13 +264,21 @@ margin-right: 5px;
 }
 
 .postHonk {
-    border: solid --redPrimary 2px;
+    border: solid var(--redPrimary) 2px;
     border-radius: 50px;
     background: var(--redPrimary);
     color: var(--redTertiary);
     display: flex;
     place-content: center;
 }
+
+.postHonk:hover {
+    border: solid var(--redTertiary) 2px;
+    background: var(--redTertiary);
+    color: var(--redPrimary);
+    font-weight: 700;
+}
+
 /* POST BAR ENDS */
 
 /* TIMELINE */
@@ -311,6 +301,10 @@ margin-right: 5px;
     height: 50px;
     width: 50px;
     border-radius: 50%;
+}
+
+.post img {
+    width: 300px;
 }
 
 .reactions {
